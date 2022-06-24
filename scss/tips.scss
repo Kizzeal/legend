@@ -1,0 +1,24 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 240px;
+  gap: 1rem;
+  margin: 20px auto;
+  color: #fff;
+  padding: 1rem;
+
+  h2 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+
+  .card {
+    background: linear-gradient(
+        from bottom-right,
+        hsl(211, 40%, 75%),
+        hsl(100, 90%, 90%) 20%
+      ),
+      center center / cover, no-repeat;
+    background-attachment: fixed;
+  }
+}
