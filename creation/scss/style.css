@@ -393,27 +393,27 @@ section#work h2 span {
   transition: background-image 1s ease;
 }
 
-.work h1:nth-child(1):hover ~ .imgBx {
+.work :nth-child(1):hover ~ .imgBx {
   background-image: url(/images/wallpaper-8.jpg);
 }
 
-.work h1:nth-child(2):hover ~ .imgBx {
+.work :nth-child(2):hover ~ .imgBx {
   background-image: url(/images/wallpaper-4.jpg);
 }
 
-.work h1:nth-child(3):hover ~ .imgBx {
+.work :nth-child(3):hover ~ .imgBx {
   background-image: url(/images/wallpaper-6.jpg);
 }
 
-.work h1:nth-child(4):hover ~ .imgBx {
+.work :nth-child(4):hover ~ .imgBx {
   background-image: url(/images/wallpaper-3-tall.jpg);
 }
 
-.work h1:nth-child(5):hover ~ .imgBx {
+.work :nth-child(5):hover ~ .imgBx {
   background-image: url(/images/wallpaper-5-tall.jpg);
 }
 
-.work h1:nth-child(6):hover ~ .imgBx {
+.work :nth-child(6):hover ~ .imgBx {
   background-image: url(/images/wallpaper-7-tall.jpg);
 }
 

@@ -290,6 +290,7 @@ section#work h2 {
     font-size: 3rem;
     position: relative;
     z-index: 2;
+    // color: transparent;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 2px $justblack;
     cursor: pointer;
@@ -317,22 +318,22 @@ section#work h2 {
     transition: background-image 1s ease;
   }
 
-  h1:nth-child(1):hover ~ .imgBx {
+  :nth-child(1):hover ~ .imgBx {
     background-image: url(/images/wallpaper-8.jpg);
   }
-  h1:nth-child(2):hover ~ .imgBx {
+  :nth-child(2):hover ~ .imgBx {
     background-image: url(/images/wallpaper-4.jpg);
   }
-  h1:nth-child(3):hover ~ .imgBx {
+  :nth-child(3):hover ~ .imgBx {
     background-image: url(/images/wallpaper-6.jpg);
   }
-  h1:nth-child(4):hover ~ .imgBx {
+  :nth-child(4):hover ~ .imgBx {
     background-image: url(/images/wallpaper-3-tall.jpg);
   }
-  h1:nth-child(5):hover ~ .imgBx {
+  :nth-child(5):hover ~ .imgBx {
     background-image: url(/images/wallpaper-5-tall.jpg);
   }
-  h1:nth-child(6):hover ~ .imgBx {
+  :nth-child(6):hover ~ .imgBx {
     background-image: url(/images/wallpaper-7-tall.jpg);
   }
 }
