@@ -350,14 +350,14 @@ section#work h2 span {
   border-radius: 0.5rem;
   padding: 10px 3%;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
 }
 
 .work h1 {
@@ -386,6 +386,8 @@ section#work h2 span {
   background-image: url(/images/gray-abstract-wireframe-technology-background.jpg);
   background-size: cover;
   background-position: center;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 0.5rem;
   -webkit-transition: background-image 1s ease;
   transition: background-image 1s ease;
@@ -401,6 +403,18 @@ section#work h2 span {
 
 .work h1:nth-child(3):hover ~ .imgBx {
   background-image: url(/images/wallpaper-6.jpg);
+}
+
+.work h1:nth-child(4):hover ~ .imgBx {
+  background-image: url(/images/wallpaper-3-tall.jpg);
+}
+
+.work h1:nth-child(5):hover ~ .imgBx {
+  background-image: url(/images/wallpaper-5-tall.jpg);
+}
+
+.work h1:nth-child(6):hover ~ .imgBx {
+  background-image: url(/images/wallpaper-7-tall.jpg);
 }
 
 /*contact*/

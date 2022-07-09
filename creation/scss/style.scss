@@ -275,9 +275,15 @@ section#work h2 {
   @include bg_gradient;
   padding: 10px 3%;
   position: relative;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+
+  // display: flex;
+  // justify-content: space-around;
+  // align-items: center;
+  // flex-wrap: wrap;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  align-content: space-around;
 
   h1 {
     font-size: 3rem;
@@ -305,6 +311,7 @@ section#work h2 {
     background-image: url(/images/gray-abstract-wireframe-technology-background.jpg);
     background-size: cover;
     background-position: center;
+    object-fit: contain;
     border-radius: 0.5rem;
     transition: background-image 1s ease;
   }
@@ -318,7 +325,19 @@ section#work h2 {
   h1:nth-child(3):hover ~ .imgBx {
     background-image: url(/images/wallpaper-6.jpg);
   }
+  h1:nth-child(4):hover ~ .imgBx {
+    background-image: url(/images/wallpaper-3-tall.jpg);
+  }
+  h1:nth-child(5):hover ~ .imgBx {
+    background-image: url(/images/wallpaper-5-tall.jpg);
+  }
+  h1:nth-child(6):hover ~ .imgBx {
+    background-image: url(/images/wallpaper-7-tall.jpg);
+  }
 }
+
+// add more images
+// preferably with same dimensions
 
 /*contact*/
 
