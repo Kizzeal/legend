@@ -356,6 +356,69 @@ section#contact h2 {
 .contact {
   @include bg_gradient;
   height: 75vh;
+
+  div {
+    position: relative;
+    @include grey_block;
+    @include flex;
+    height: 300px;
+    margin-left: 0;
+    background: rgba(0, 0, 0, 0.75);
+    // background: linear-gradient(
+    //   hsla(255, 76%, 90%, 0.275),
+    //   hsla(176, 76%, 60%, 0.275)
+    // );
+    overflow: hidden;
+
+    span {
+      position: absolute;
+      inset: 0.25rem;
+      padding: 30px;
+      background: #0c1022;
+      border-radius: 0.5rem;
+      z-index: 1;
+    }
+  }
+  div::before {
+    content: "";
+    position: absolute;
+    width: 30rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    background-image: conic-gradient(
+      transparent,
+      transparent,
+      transparent,
+      hsl(0, 100%, 58%)
+    );
+    animation: animate 4s linear infinite;
+    animation-timing-function: cubic-bezier(0.63, -0.2, 0.75, 0.72);
+  }
+  div::after {
+    content: "";
+    position: absolute;
+    width: 30rem;
+    height: 10rem;
+    border-radius: 0.5rem;
+    background-image: conic-gradient(
+      transparent,
+      transparent,
+      transparent,
+      hsl(176, 90%, 60%)
+    );
+    // #eedbae
+    animation: animate 4s linear -2s infinite;
+    animation-timing-function: cubic-bezier(0.63, -0.2, 0.75, 0.72);
+  }
+
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
 }
 
 /*crew*/

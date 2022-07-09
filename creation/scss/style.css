@@ -442,6 +442,86 @@ section#contact h2 span {
   height: 75vh;
 }
 
+.contact div {
+  position: relative;
+  background-color: rgba(51, 51, 51, 0.568);
+  color: #fff;
+  margin-left: 40px;
+  padding: 2rem;
+  width: 25%;
+  border-radius: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 300px;
+  margin-left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+}
+
+.contact div span {
+  position: absolute;
+  inset: 0.25rem;
+  padding: 30px;
+  background: #0c1022;
+  border-radius: 0.5rem;
+  z-index: 1;
+}
+
+.contact div::before {
+  content: "";
+  position: absolute;
+  width: 30rem;
+  height: 10rem;
+  border-radius: 0.5rem;
+  background-image: conic-gradient(transparent, transparent, transparent, #ff2929);
+  -webkit-animation: animate 4s linear infinite;
+          animation: animate 4s linear infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.63, -0.2, 0.75, 0.72);
+          animation-timing-function: cubic-bezier(0.63, -0.2, 0.75, 0.72);
+}
+
+.contact div::after {
+  content: "";
+  position: absolute;
+  width: 30rem;
+  height: 10rem;
+  border-radius: 0.5rem;
+  background-image: conic-gradient(transparent, transparent, transparent, #3df5e9);
+  -webkit-animation: animate 4s linear -2s infinite;
+          animation: animate 4s linear -2s infinite;
+  -webkit-animation-timing-function: cubic-bezier(0.63, -0.2, 0.75, 0.72);
+          animation-timing-function: cubic-bezier(0.63, -0.2, 0.75, 0.72);
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
 /*crew*/
 section#crew h2 {
   text-align: center;
