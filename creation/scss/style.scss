@@ -24,9 +24,9 @@ $blurrish: #333;
   border-radius: 0.5rem;
 }
 
-* {
+html {
   scroll-behavior: smooth;
-  scroll-padding-top: 1rem;
+  scroll-padding-top: var(--scroll-padding, 1rem);
 }
 
 body {
@@ -185,6 +185,7 @@ h2.stroke {
 .home {
   @include flex;
   @include bg_gradient;
+  height: 75vh;
 
   // flex-direction: column;
 
@@ -212,6 +213,7 @@ h2.stroke {
   margin-left: 40px;
   padding: 2rem;
   width: 25%;
+  border-radius: 0.5rem;
 }
 
 .divider {

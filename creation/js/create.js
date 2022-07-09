@@ -65,3 +65,10 @@ window.addEventListener("scroll", ()=>{
   let header = document.querySelector("header");
   header.classList.toggle("sticky", window.scrollY > 0)
 })
+
+
+const navigationHeight = document.querySelector('header').offsetHeight;
+
+document.documentElement.style.setProperty('--scroll-padding', navigationHeight - 10 + "px");
+
+console.log(navigationHeight)
