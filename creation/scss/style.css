@@ -348,6 +348,59 @@ section#work h2 span {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(220, 210, 249, 0.275)), to(rgba(75, 231, 220, 0.275)));
   background: linear-gradient(rgba(220, 210, 249, 0.275), rgba(75, 231, 220, 0.275));
   border-radius: 0.5rem;
+  padding: 10px 3%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.work h1 {
+  font-size: 3rem;
+  position: relative;
+  z-index: 2;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 2px black;
+  cursor: pointer;
+  transition: transform 500ms ease, -webkit-text-stroke 500ms ease, -webkit-text-fill-color 500ms ease;
+}
+
+.work h1:hover {
+  -webkit-text-fill-color: #fff;
+  -webkit-text-stroke: 2px transparent;
+  -webkit-transform: translateY(-1rem);
+          transform: translateY(-1rem);
+}
+
+.work .imgBx {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 65%;
+  background-image: url(/images/gray-abstract-wireframe-technology-background.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 0.5rem;
+  -webkit-transition: background-image 1s ease;
+  transition: background-image 1s ease;
+}
+
+.work h1:nth-child(1):hover ~ .imgBx {
+  background-image: url(/images/wallpaper-8.jpg);
+}
+
+.work h1:nth-child(2):hover ~ .imgBx {
+  background-image: url(/images/wallpaper-4.jpg);
+}
+
+.work h1:nth-child(3):hover ~ .imgBx {
+  background-image: url(/images/wallpaper-6.jpg);
 }
 
 /*contact*/

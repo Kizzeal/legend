@@ -80,6 +80,7 @@ header.sticky {
     color: $justblack;
   }
 }
+
 header {
   background-color: transparentize(#333, 0.25);
   color: #fff;
@@ -272,6 +273,51 @@ section#work h2 {
 
 .work {
   @include bg_gradient;
+  padding: 10px 3%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  h1 {
+    font-size: 3rem;
+    position: relative;
+    z-index: 2;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 2px $justblack;
+    cursor: pointer;
+    transition: transform 500ms ease, -webkit-text-stroke 500ms ease,
+      -webkit-text-fill-color 500ms ease;
+
+    &:hover {
+      -webkit-text-fill-color: #fff;
+      -webkit-text-stroke: 2px transparent;
+      transform: translateY(-1rem);
+    }
+  }
+
+  .imgBx {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 65%;
+    background-image: url(/images/gray-abstract-wireframe-technology-background.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 0.5rem;
+    transition: background-image 1s ease;
+  }
+
+  h1:nth-child(1):hover ~ .imgBx {
+    background-image: url(/images/wallpaper-8.jpg);
+  }
+  h1:nth-child(2):hover ~ .imgBx {
+    background-image: url(/images/wallpaper-4.jpg);
+  }
+  h1:nth-child(3):hover ~ .imgBx {
+    background-image: url(/images/wallpaper-6.jpg);
+  }
 }
 
 /*contact*/
