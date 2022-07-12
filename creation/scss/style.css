@@ -229,17 +229,6 @@ section#home h2 span {
   -webkit-text-stroke: 1px #fff;
 }
 
-h2.stroke {
-  text-align: center;
-  font-size: 4rem;
-  color: #fff;
-}
-
-h2.stroke span {
-  color: transparent;
-  -webkit-text-stroke: 1px #fff;
-}
-
 .home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,6 +280,18 @@ h2.stroke span {
   border: 1px solid rgba(255, 255, 255, 0.507);
   border-radius: 0.25rem;
   opacity: 0.25;
+}
+
+section#design h2 {
+  text-align: center;
+  font-size: 4rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+section#design h2 span {
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
 }
 
 .contents {

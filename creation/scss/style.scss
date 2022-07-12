@@ -187,10 +187,6 @@ section#home h2 {
   margin-bottom: 2rem;
 }
 
-h2.stroke {
-  @include stroke;
-}
-
 .home {
   @include flex;
   @include bg_gradient;
@@ -229,6 +225,11 @@ h2.stroke {
 }
 
 // #design
+
+section#design h2 {
+  @include stroke;
+  margin-bottom: 2rem;
+}
 
 .contents {
   display: grid;
