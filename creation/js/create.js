@@ -30,7 +30,7 @@ const picks = document.querySelectorAll(".category");
       pick.classList.remove("active")
   }, 2000)
 
-    console.log(e.target.childNodes)
+    // console.log(e.target.childNodes)
   })
 
 })
