@@ -6,10 +6,10 @@ $blurrish: #333;
 @mixin stroke {
   text-align: center;
   font-size: 4rem;
-  color: #fff;
+  color: $text-color;
   span {
     color: transparent;
-    -webkit-text-stroke: 1px #fff;
+    -webkit-text-stroke: 1px $text-color;
   }
 }
 
@@ -26,7 +26,7 @@ $blurrish: #333;
 
 @mixin grey_block {
   background-color: rgba(51, 51, 51, 0.568);
-  color: #fff;
+  color: $text-color;
   margin-left: 40px;
   padding: 2rem;
   width: 25%;
@@ -83,7 +83,7 @@ main {
 
 header.sticky {
   padding: 5px 100px;
-  background-color: transparentize(#fff, 0.25);
+  background-color: transparentize($text-color, 0.25);
 
   a {
     color: $justblack;
@@ -92,7 +92,7 @@ header.sticky {
 
 header {
   background-color: transparentize(#333, 0.25);
-  color: #fff;
+  color: $text-color;
   padding: 10px;
   position: fixed;
   top: 0;
@@ -136,7 +136,7 @@ header {
 
       a {
         cursor: pointer;
-        color: #fff;
+        color: $text-color;
         padding: 0.5em;
         border-radius: 10px;
         transform: scale(1);
@@ -196,18 +196,22 @@ section#home h2 {
 
   div h1 {
     text-align: center;
-    font-size: 4rem;
-    color: #fff;
+    font-size: 6rem;
+    color: $whiteish;
     span {
       color: transparent;
-      -webkit-text-stroke: 0.5px #fff;
+      -webkit-text-stroke: 0.5px $text-color;
+    }
+
+    &:first-child {
+      @include gradient-text(145deg, #dcd2f9, #4be7dc, #f3ec78);
     }
   }
 
   h3 {
     text-align: center;
     font-size: 2rem;
-    color: #fff;
+    color: $text-color;
     text-transform: uppercase;
   }
 }
@@ -263,7 +267,7 @@ section#design {
     }
 
     article {
-      background: #fff;
+      background: $text-color;
       border-radius: 10px;
       text-align: center;
       margin: 0 auto;
@@ -332,7 +336,7 @@ section#work h2 {
       -webkit-text-fill-color 500ms ease;
 
     &:hover {
-      -webkit-text-fill-color: #fff;
+      -webkit-text-fill-color: $text-color;
       -webkit-text-stroke: 2px transparent;
       transform: translateY(-1rem);
     }

@@ -250,13 +250,21 @@ section#home h2 span {
 
 .home div h1 {
   text-align: center;
-  font-size: 4rem;
-  color: #fff;
+  font-size: 6rem;
+  color: rgba(255, 255, 255, 0.692);
 }
 
 .home div h1 span {
   color: transparent;
   -webkit-text-stroke: 0.5px #fff;
+}
+
+.home div h1:first-child {
+  background-color: #f3ec78;
+  background-image: linear-gradient(145deg, #dcd2f9, #4be7dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .home h3 {
