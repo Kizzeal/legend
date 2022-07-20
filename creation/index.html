@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="../creation/scss/style.css" />
   </head>
   <body>
+    <!-- <div id="progressbar"></div>
+    <div id="scrollpath"></div> -->
     <header>
       <nav>
         <h2>
@@ -88,12 +90,10 @@
             </article>
           </div>
 
-          <div class="content card-wide">
+          <div class="content">
             <img src="../images/wallpaper-3-tall.jpg" alt="neon car" />
             <article>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia,
-              fugiat laborum voluptates, facilis possimus consequuntur
-              perspiciatis praesentium velit officiis ex molestias itaque id
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </article>
           </div>
         </div>
@@ -165,5 +165,13 @@
 
     <footer></footer>
     <script src="js/create.js" defer></script>
+    <!-- <script>
+      let progress = document.getElementById("progressbar");
+      let totatlHeight = document.body.scrollHeight * window.innerHeight;
+      window.onscroll = function () {
+        let progressHeigth = (window.pageYOffset / totatlHeight) * 100;
+        progress.style.height = progressHeigth + "%";
+      };
+    </script> -->
   </body>
 </html>

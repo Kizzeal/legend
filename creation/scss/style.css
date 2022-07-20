@@ -93,6 +93,77 @@ select {
   }
 }
 
+::-webkit-scrollbar {
+  width: 0.75em;
+}
+
+::-webkit-scrollbar-track {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(130, 106, 200, 0.667)), to(rgba(41, 112, 107, 0.667)));
+  background: linear-gradient(rgba(130, 106, 200, 0.667), rgba(41, 112, 107, 0.667));
+  border-radius: 100vw;
+  margin-block: 0.5em;
+}
+
+::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, left bottom, from(#dcd2f966), to(#4be7dc66));
+  background: linear-gradient(#dcd2f966, #4be7dc66);
+  border-radius: 100vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#dcd2f9), to(#03ffee));
+  background: linear-gradient(#dcd2f9, #03ffee);
+}
+
+/*
+
+#scrollpath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+#progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 10px;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  animation: animates 5s linear infinite;
+}
+@keyframes animates {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
+#progressbar:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(10px);
+}
+#progressbar:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(30px);
+}
+*/
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--scroll-padding, 1rem);
@@ -250,7 +321,7 @@ section#home h2 span {
 
 .home div h1 {
   text-align: center;
-  font-size: 6rem;
+  font-size: 4em;
   color: rgba(255, 255, 255, 0.692);
 }
 
@@ -327,10 +398,10 @@ section#design h2 span {
           box-shadow: 0 -0.5rem 2rem transparent, 0 0 2rem transparent;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: -webkit-transform 500ms ease, -webkit-box-shadow 500ms ease-in-out 125ms;
-  transition: -webkit-transform 500ms ease, -webkit-box-shadow 500ms ease-in-out 125ms;
-  transition: transform 500ms ease, box-shadow 500ms ease-in-out 125ms;
-  transition: transform 500ms ease, box-shadow 500ms ease-in-out 125ms, -webkit-transform 500ms ease, -webkit-box-shadow 500ms ease-in-out 125ms;
+  -webkit-transition: -webkit-transform 500ms ease, -webkit-box-shadow 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28) 125ms;
+  transition: -webkit-transform 500ms ease, -webkit-box-shadow 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28) 125ms;
+  transition: transform 500ms ease, box-shadow 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28) 125ms;
+  transition: transform 500ms ease, box-shadow 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28) 125ms, -webkit-transform 500ms ease, -webkit-box-shadow 500ms cubic-bezier(0.18, 0.89, 0.32, 1.28) 125ms;
 }
 
 .contents .content img:hover {
@@ -356,21 +427,6 @@ section#design h2 span {
   grid-column: span 2 / auto;
 }
 
-.content:nth-of-type(3) {
-  -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-area: 2 / 1 / span 1 / 2;
-}
-
-.content:nth-of-type(5) {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-area: 3 / 1 / 3 / span 2;
-}
-
 section#work h2 {
   text-align: center;
   font-size: 4rem;
@@ -394,12 +450,12 @@ section#work h2 span {
   position: relative;
   display: -ms-grid;
   display: grid;
+  justify-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  justify-items: center;
-  -ms-flex-line-pack: distribute;
-      align-content: space-around;
+  -ms-flex-line-pack: space-evenly;
+      align-content: space-evenly;
 }
 
 .work h1 {
@@ -413,7 +469,11 @@ section#work h2 span {
 }
 
 .work h1:hover {
-  -webkit-text-fill-color: #fff;
+  background-color: #f3ec78;
+  background-image: linear-gradient(145deg, #dcd2f9, #4be7dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 2px transparent;
   -webkit-transform: translateY(-1rem);
           transform: translateY(-1rem);
@@ -422,17 +482,14 @@ section#work h2 span {
 .work .imgBx {
   position: absolute;
   top: 0;
-  right: 0;
   height: 100%;
-  width: 65%;
+  width: 75%;
   background-image: url(/images/gray-abstract-wireframe-technology-background.jpg);
   background-size: cover;
   background-position: center;
-  -o-object-fit: contain;
-     object-fit: contain;
   border-radius: 0.5rem;
-  -webkit-transition: background-image 1s ease;
-  transition: background-image 1s ease;
+  -webkit-transition: background-image 1s ease-in-out;
+  transition: background-image 1s ease-in-out;
 }
 
 .work :nth-child(1):hover ~ .imgBx {
@@ -448,6 +505,12 @@ section#work h2 span {
 }
 
 .work :nth-child(4):hover ~ .imgBx {
+  width: 75%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   background-image: url(/images/wallpaper-3-tall.jpg);
 }
 
