@@ -7,6 +7,7 @@ $red: rgb(250, 16, 16);
 $whiteish: rgba(255, 255, 255, 0.692);
 $indigo: rgb(137, 13, 194);
 $justblack: rgb(0, 0, 0);
+
 $orange: saturate(
   $color: orange,
   $amount: 20%,
@@ -16,7 +17,19 @@ $font-weights: (
   "bold": 700,
   "medium": 500,
 );
+
 $text-color: #fff;
+
+@mixin gradient-text($deg, $color1, $color2, $fallback) {
+  background-color: $fallback;
+  background-image: linear-gradient($deg, $color1, $color2);
+  // background-color: #f3ec78;
+  // background-image: linear-gradient(45deg, #f3f3ef, #ce4c71);
+
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 @function weight($weight-name) {
   @return map-get($font-weights, $weight-name);
