@@ -310,12 +310,26 @@ section#design h2 span {
       -ms-flex-align: stretch;
           align-items: stretch;
   row-gap: 1rem;
+  cursor: pointer;
 }
 
 .contents .content img {
   border-radius: 5px;
+  -webkit-box-shadow: 0 -0.5rem 2rem transparent, 0 0 2rem transparent;
+          box-shadow: 0 -0.5rem 2rem transparent, 0 0 2rem transparent;
   -o-object-fit: cover;
      object-fit: cover;
+  -webkit-transition: -webkit-transform 500ms ease, -webkit-box-shadow 500ms ease-in-out 125ms;
+  transition: -webkit-transform 500ms ease, -webkit-box-shadow 500ms ease-in-out 125ms;
+  transition: transform 500ms ease, box-shadow 500ms ease-in-out 125ms;
+  transition: transform 500ms ease, box-shadow 500ms ease-in-out 125ms, -webkit-transform 500ms ease, -webkit-box-shadow 500ms ease-in-out 125ms;
+}
+
+.contents .content img:hover {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-box-shadow: 0 -0.5rem 2rem rgba(75, 231, 220, 0.275), 0 0 2rem rgba(220, 210, 249, 0.275);
+          box-shadow: 0 -0.5rem 2rem rgba(75, 231, 220, 0.275), 0 0 2rem rgba(220, 210, 249, 0.275);
 }
 
 .contents .content article {

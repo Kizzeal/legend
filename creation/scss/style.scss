@@ -245,12 +245,21 @@ section#design {
     row-gap: 1rem;
     // place-content: center;
     // grid-column: span 1 / auto;
+    cursor: pointer;
 
     img {
       // height: 480px;
       // width: 480px;
       border-radius: 5px;
+      box-shadow: 0 -0.5rem 2rem transparent, 0 0 2rem transparent;
       object-fit: cover;
+      transition: transform 500ms ease, box-shadow 500ms ease-in-out 125ms;
+
+      &:hover {
+        transform: scale(0.95);
+        box-shadow: 0 -0.5rem 2rem hsla(176, 76%, 60%, 0.275),
+          0 0 2rem hsla(255, 76%, 90%, 0.275);
+      }
     }
 
     article {
