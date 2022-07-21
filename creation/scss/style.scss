@@ -256,6 +256,7 @@ section #home {
 section#home h2 {
   @include stroke;
   margin-bottom: 2rem;
+  color: #dcd2f966;
 }
 
 .home {
@@ -305,6 +306,7 @@ section#design {
   h2 {
     @include stroke;
     margin-bottom: 2rem;
+    color: hsla(176, 76%, 60%, 0.667);
   }
 }
 
@@ -346,6 +348,7 @@ section#design {
       margin: 0 auto;
       // margin-top: -4em;
       padding: 1rem;
+      color: $justblack;
     }
   }
 }
@@ -380,6 +383,7 @@ section#design {
 section#work h2 {
   @include stroke;
   margin-bottom: 2rem;
+  color: #dcd2f966;
 }
 
 .work {
@@ -409,7 +413,7 @@ section#work h2 {
       -webkit-text-fill-color 500ms ease;
 
     &:hover {
-      @include gradient-text(145deg, #dcd2f9, #4be7dc, #f3ec78);
+      @include gradient-text(145deg, #fafafa, #859190, #f3ec78);
       // -webkit-text-fill-color: $text-color;
       -webkit-text-stroke: 2px transparent;
       transform: translateY(-1rem);
@@ -424,31 +428,33 @@ section#work h2 {
     background-image: url(/images/gray-abstract-wireframe-technology-background.jpg);
     background-size: cover;
     background-position: center;
+    object-fit: cover;
     border-radius: 0.5rem;
-    transition: background-image 1s ease-in-out;
+    transition: background-image 500ms ease-in-out 125ms;
   }
 
   :nth-child(1):hover ~ .imgBx {
     background-image: url(/images/wallpaper-8.jpg);
   }
   :nth-child(2):hover ~ .imgBx {
-    background-image: url(/images/wallpaper-4.jpg);
+    // background-image: url(/images/wallpaper-4.jpg);
+    background-image: url(/images/wallpaper-8.jpg);
   }
   :nth-child(3):hover ~ .imgBx {
-    background-image: url(/images/wallpaper-6.jpg);
+    // background-image: url(/images/wallpaper-6.jpg);
+    background-image: url(/images/wallpaper-8.jpg);
   }
   :nth-child(4):hover ~ .imgBx {
-    width: 75%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    background-image: url(/images/wallpaper-3-tall.jpg);
+    // background-image: url(/images/wallpaper-3-tall.jpg);
+    background-image: url(/images/wallpaper-8.jpg);
   }
   :nth-child(5):hover ~ .imgBx {
-    background-image: url(/images/wallpaper-5-tall.jpg);
+    // background-image: url(/images/wallpaper-5-tall.jpg);
+    background-image: url(/images/wallpaper-8.jpg);
   }
   :nth-child(6):hover ~ .imgBx {
-    background-image: url(/images/wallpaper-7-tall.jpg);
+    // background-image: url(/images/wallpaper-7-tall.jpg);
+    background-image: url(/images/wallpaper-8.jpg);
   }
 }
 
@@ -464,11 +470,17 @@ section#contact h2 {
 .contact {
   @include bg_gradient;
   height: 75vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-auto-rows: 15vw;
+  justify-items: center;
 
-  div {
+  .moving-border {
     position: relative;
     @include grey_block;
     @include flex;
+    width: 50%;
     height: 300px;
     margin-left: 0;
     background: rgba(0, 0, 0, 0.75);
@@ -487,7 +499,12 @@ section#contact h2 {
       z-index: 1;
     }
   }
-  div::before {
+
+  // .form {
+
+  // }
+
+  .moving-border::before {
     content: "";
     position: absolute;
     width: 30rem;
@@ -502,7 +519,7 @@ section#contact h2 {
     animation: animate 4s linear infinite;
     animation-timing-function: cubic-bezier(0.63, -0.2, 0.75, 0.72);
   }
-  div::after {
+  .moving-border::after {
     content: "";
     position: absolute;
     width: 30rem;
