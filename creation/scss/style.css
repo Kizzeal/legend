@@ -393,6 +393,8 @@ section#design h2 span {
 }
 
 .contents .content img {
+  height: 100%;
+  width: 100%;
   border-radius: 5px;
   -webkit-box-shadow: 0 -0.5rem 2rem transparent, 0 0 2rem transparent;
           box-shadow: 0 -0.5rem 2rem transparent, 0 0 2rem transparent;
@@ -405,8 +407,8 @@ section#design h2 span {
 }
 
 .contents .content img:hover {
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  -webkit-transform: scale(0.99);
+          transform: scale(0.99);
   -webkit-box-shadow: 0 -0.5rem 2rem rgba(75, 231, 220, 0.275), 0 0 2rem rgba(220, 210, 249, 0.275);
           box-shadow: 0 -0.5rem 2rem rgba(75, 231, 220, 0.275), 0 0 2rem rgba(220, 210, 249, 0.275);
 }
