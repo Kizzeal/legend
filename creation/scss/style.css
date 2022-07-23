@@ -199,7 +199,7 @@ main {
 }
 
 header.sticky {
-  padding: 5px 100px;
+  padding: 5px;
   background-color: rgba(255, 255, 255, 0.75);
 }
 
@@ -311,6 +311,8 @@ section#home h2 span {
   -webkit-box-align: center;
   -ms-flex-align: center;
       align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   height: 100vh;
   width: 100%;
   padding: 2rem;
@@ -354,6 +356,7 @@ section#home h2 span {
   width: 25%;
   border-radius: 0.5rem;
   height: 50%;
+  width: 50%;
 }
 
 .write-up p {
