@@ -353,6 +353,17 @@ section#home h2 span {
   padding: 2rem;
   width: 25%;
   border-radius: 0.5rem;
+  height: 50%;
+}
+
+.write-up p {
+  /*  overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; */
+  overflow: hidden;
+  -webkit-line-clamp: 5;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 
 .divider {
