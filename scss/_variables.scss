@@ -7,7 +7,10 @@ $red: rgb(250, 16, 16);
 $whiteish: rgba(255, 255, 255, 0.692);
 $indigo: rgb(137, 13, 194);
 $justblack: rgb(0, 0, 0);
-$orange: saturate($color: orange, $amount: 20%);
+$orange: saturate(
+  $color: orange,
+  $amount: 20%,
+);
 $font-weights: (
   "regular": 400,
   "bold": 700,
@@ -72,7 +75,7 @@ $text-color: #fff;
 
 // landing Sets
 @mixin mobile($mq) {
-  @media only screen and(max-width: $mq +px) {
+  @media only screen and (max-width: $mq +px) {
     @content;
   }
 }

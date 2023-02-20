@@ -514,9 +514,35 @@ section#contact h2 {
     }
   }
 
-  // .form {
+  .form {
+    fieldset {
+      max-width: fit-content;
+      // min-width: 20em;
+      outline: none;
+      border: 0.25rem solid hsla(255, 46%, 60%, 0.667);
+      border-radius: 12px;
+      // // border-image-slice: 4;
+      // border-image-source: linear-gradient(
+      //   hsla(255, 46%, 60%, 0.667),
+      //   hsla(176, 46%, 30%, 0.667)
+      // );
 
-  // }
+      legend {
+        font-size: 1.25em;
+        padding: 0.25em;
+        @include gradient-text(145deg, #dcd2f9, #4be7dc, #f3ec78);
+      }
+
+      label {
+        display: block;
+        margin-top: 1em;
+
+        &:first-of-type {
+          margin-top: 0;
+        }
+      }
+    }
+  }
 
   .moving-border::before {
     content: "";
