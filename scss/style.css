@@ -121,11 +121,6 @@ body {
   transform: translateY(-3px) scale(1.025);
 }
 
-.card-hover {
-  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.17em, rgba(2, 8, 20, 0.08) 0px 0.17em 0.5em;
-  transform: translateY(-3px) scale(1.1);
-}
-
 .basic-grid {
   display: grid;
   gap: 1rem;
