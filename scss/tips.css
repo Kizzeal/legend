@@ -107,11 +107,9 @@ body .card {
   align-items: center;
   flex-direction: column;
   font-size: 3rem;
-  background: linear-gradient(from bottom-right, hsl(211deg, 40%, 75%), hsl(100deg, 90%, 90%) 20%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
   height: 100%;
   width: 100%;
   cursor: pointer;
@@ -142,6 +140,26 @@ body .photo-grid {
   }
   body .photo-grid .card-wide {
     grid-column: span 2/auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  body .photo-grid .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 3rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.15rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
+    border-radius: 4px;
+    transition: box-shadow 500ms ease-in-out 500ms, transform 500ms ease-in-out 500ms, background 500ms ease-in-out 500ms;
+    overflow: hidden;
   }
 }
 
