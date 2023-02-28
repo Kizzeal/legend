@@ -108,22 +108,10 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  border-radius: 4px;
   height: 100%;
   width: 100%;
   cursor: pointer;
-  box-shadow: rgba(193, 211, 252, 0.1) 0px 0.15rem 0.15rem, rgba(255, 255, 255, 0.1) 0px 0.075rem 0.175rem;
-  border-radius: 4px;
-  transition: box-shadow 500ms ease-in-out 250ms, transform 500ms ease-in-out 250ms;
-  overflow: hidden;
-}
-.card:hover {
-  box-shadow: rgba(207, 221, 249, 0.1) 0px 0.35em 1.17em, rgba(250, 255, 220, 0.08) 0px 0.17em 0.5em;
-  transform: translateY(-3px) scale(1.025);
-}
-
-.card-hover {
-  box-shadow: rgba(2, 8, 20, 0.1) 0px 0.35em 1.17em, rgba(2, 8, 20, 0.08) 0px 0.17em 0.5em;
-  transform: translateY(-3px) scale(1.1);
 }
 
 .basic-grid {
@@ -139,6 +127,15 @@ body {
   grid-auto-rows: 240px;
 }
 @media screen and (min-width: 600px) {
+  .photo-grid .card {
+    box-shadow: rgba(193, 211, 252, 0.1) 0px 0.15rem 0.15rem, rgba(255, 255, 255, 0.1) 0px 0.075rem 0.175rem;
+    transition: box-shadow 500ms ease-in-out 250ms, transform 500ms ease-in-out 250ms;
+    overflow: hidden;
+  }
+  .photo-grid .card:hover {
+    box-shadow: rgba(207, 221, 249, 0.1) 0px 0.35em 1.17em, rgba(250, 255, 220, 0.08) 0px 0.17em 0.5em;
+    transform: translateY(-3px) scale(1.025);
+  }
   .photo-grid .card-tall {
     grid-row: span 2/auto;
   }
@@ -162,7 +159,6 @@ body {
     cursor: pointer;
     box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.15rem, rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
     border-radius: 4px;
-    transition: box-shadow 500ms ease-in-out 500ms, transform 500ms ease-in-out 500ms, background 500ms ease-in-out 500ms;
     overflow: hidden;
   }
 }
