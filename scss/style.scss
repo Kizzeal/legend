@@ -95,8 +95,8 @@ body {
       box-shadow: rgba(3, 8, 20, 0.1) 0px 0.15rem 0.15rem,
         rgba(2, 8, 20, 0.1) 0px 0.075rem 0.175rem;
       border-radius: 4px;
-      transition: box-shadow 500ms ease-in-out 500ms,
-        transform 500ms ease-in-out 500ms, background 500ms ease-in-out 500ms;
+      // transition: box-shadow 500ms ease-in-out 500ms,
+      //   transform 500ms ease-in-out 500ms, background 500ms ease-in-out 500ms;
       overflow: hidden;
     }
   }
